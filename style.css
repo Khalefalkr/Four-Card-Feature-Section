@@ -1,0 +1,122 @@
+body{
+    margin:0;
+    background-color:#f5f5f5;
+    font-family:sans-serif;
+}
+.top{
+    padding-top:30px;
+    text-align:center;
+    margin-bottom:70px;
+}
+.top > ._one{
+    font-size:32.5px;
+    margin-bottom:5px;
+    color:#222;
+}
+.top > h1{
+    color:#3C3633;
+    margin-top:5px;
+}
+.top > ._two{
+    color:#808080;
+    padding-left:500px;
+    padding-right:500px;
+}
+.parent div{
+    background-color:#ffffff;
+    padding-left:40px;
+    padding-right:70px;
+    border-radius:5px;
+    box-shadow:0px 0px 10px 0.5px #157ec09f;
+    clip-path: inset(0px -15px -15px -15px);
+}
+.parent div h2{
+    color:#3C3633;
+    padding-top:10px;
+}
+.parent div p{
+    color:#808080;
+    line-height:25px;
+}
+.parent{
+    height:800px;
+    display:grid;
+    grid-template-columns:repeat(3, 400px);
+    grid-template-rows:repeat(4, 120px);
+    justify-content:center;
+    gap:35px;
+}
+.parent > .one{
+    background-image:url(./images/icon-team-builder.svg);
+    background-repeat:no-repeat;
+    background-position:90% 85%;
+    border-top:5px #ff0000 solid;
+    grid-column:2/3;
+    grid-row:1/3;
+}
+.parent > .two{
+    background-image:url(./images/icon-supervisor.svg);
+    background-repeat:no-repeat;
+    background-position:90% 85%;
+    border-top:5px #64CCC5 solid;
+    grid-row:2/4;
+}
+.parent > .three{
+    background-image:url(./images/icon-karma.svg);
+    background-repeat:no-repeat;
+    background-position:90% 85%;
+    border-top:5px #ffa500 solid;
+    grid-row:3/5;
+}
+.parent > .four{
+    background-image:url(./images/icon-calculator.svg);
+    background-repeat:no-repeat;
+    background-position:90% 85%;
+    border-top:5px #0174BE solid;
+    grid-row:2/4;
+}
+@media (max-width:600px){
+    body{
+        height:1550px;
+    }
+    .top{
+        height:400px;
+        padding-left:10px;
+        padding-right:10px;
+    }
+    .top ._two{
+        font-size:18px;
+        line-height:30px;
+        padding-left:22px;
+        padding-right:22px;
+    }
+    .parent{
+        grid-template-columns:1fr;
+        grid-template-rows:repeat(4, 250px);
+        justify-content:center;
+        align-content:center;
+        grid-template-areas:
+        "item2"
+        "item1"
+        "item3"
+        "item4";
+    }
+    .parent div{
+        margin-left:40px;
+        margin-right:40px;
+        padding-left:20px;
+        padding-right:30px;
+    }
+    .parent .one{
+        grid-area:item1;
+    }
+    .parent .two{
+        grid-area:item2;
+    }
+    .parent .three{
+        grid-area:item3;
+    }
+    .parent .four{
+        grid-area:item4;
+    }
+}
